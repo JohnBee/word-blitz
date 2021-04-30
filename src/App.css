@@ -1,7 +1,128 @@
+:root {
+    --red-salsa: #f94144ff;
+    --orange-red: #f3722cff;
+    --yellow-orange-color-wheel: #f8961eff;
+    --mango-tango: #f9844aff;
+    --maize-crayola: #f9c74fff;
+    --pistachio: #90be6dff;
+    --zomp: #43aa8bff;
+    --cadet-blue: #4d908eff;
+    --queen-blue: #577590ff;
+    --cg-blue: #277da1ff;
+}
+
+
 .App {
   text-align: center;
 }
+body {
+    padding-top: 2%;
+    background-color: var(--cg-blue);
+}
+.StartButton{
+    width: 20%;
+    height: 5%;
+    font-size: 2em;
+    background-color: var(--zomp);
+    color: white;
+    border-color: black;
+    border-style: dotted;
+    border-radius: 10px
+}
+.Timer {
+    font-size: 2em;
+    background-color: var(--queen-blue);
+    width: 10%;
+    margin: 0 auto;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: black;
+    color:white;
+}
+.Tile {
+    width: 6%;
+    height: 2%;
+    background-color: white;
+    border-style: solid;
+    border-radius: 10px;
+    margin: 1%;
+    display: inline-block;
+    padding-bottom: 2%;
+    font-size: 1.5em;
+}
+@keyframes TileSelectAnimation {
+  from {background-color: white;}
+  to {margin-top: var(--pistachio);}
+}
 
+.Tile.Selected {
+    background-color: var(--pistachio);
+    animation-name: TileSelectAnimation;
+    animation-duration: 0.5s;
+}
+input:focus{
+    outline: none;
+}
+.FoundWords{
+    width: 20%;
+    font-size: 2em;
+    border-radius: 10px;
+}
+.FoundWords.list{
+    margin: 0 auto;
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+
+}
+@keyframes FoundWordAnimation {
+  from {opacity: 0%;}
+  to {opacity: 100%;}
+}
+.FoundWord{
+    border-style: solid;
+    border-radius: 10px;
+    background-color: var(--maize-crayola);
+    animation-name: FoundWordAnimation;
+    animation-duration: 0.5s;
+}
+
+.WordInput {
+    width: 20%;
+    height: 20%;
+    font-size: 3em;
+    border-radius: 10px;
+    background-color: white;
+    border-style: solid;
+    border-color: black;
+    text-align: center;
+    color: black;
+}
+.WordInput.Invalid {
+    background-color: var(--red-salsa);
+    color:white;
+}
+.Score {
+    text-align: left;
+    padding-left: 5%;
+    padding-top: 5%;
+}
+.PlayerScore {
+    font-size: 2em;
+    padding-top: 1%;
+    width: 20%;
+    text-align: center;
+    margin: 0 auto;
+    color:White;
+}
+.Instructions{
+    color:white;
+}
+.Instructions ol{
+    margin: 0 auto;
+    text-align: center;
+    padding: 0;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
