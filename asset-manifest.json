@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/word-blitz/static/css/main.1f387d31.chunk.css",
-    "main.js": "/word-blitz/static/js/main.e757c1e8.chunk.js",
-    "main.js.map": "/word-blitz/static/js/main.e757c1e8.chunk.js.map",
+    "main.css": "/word-blitz/static/css/main.ddd754ed.chunk.css",
+    "main.js": "/word-blitz/static/js/main.b863bce5.chunk.js",
+    "main.js.map": "/word-blitz/static/js/main.b863bce5.chunk.js.map",
     "runtime-main.js": "/word-blitz/static/js/runtime-main.c93d9a0a.js",
     "runtime-main.js.map": "/word-blitz/static/js/runtime-main.c93d9a0a.js.map",
-    "static/js/2.1d919b54.chunk.js": "/word-blitz/static/js/2.1d919b54.chunk.js",
-    "static/js/2.1d919b54.chunk.js.map": "/word-blitz/static/js/2.1d919b54.chunk.js.map",
+    "static/js/2.84f35317.chunk.js": "/word-blitz/static/js/2.84f35317.chunk.js",
+    "static/js/2.84f35317.chunk.js.map": "/word-blitz/static/js/2.84f35317.chunk.js.map",
     "static/js/3.62932962.chunk.js": "/word-blitz/static/js/3.62932962.chunk.js",
     "static/js/3.62932962.chunk.js.map": "/word-blitz/static/js/3.62932962.chunk.js.map",
     "index.html": "/word-blitz/index.html",
-    "static/css/main.1f387d31.chunk.css.map": "/word-blitz/static/css/main.1f387d31.chunk.css.map",
-    "static/js/2.1d919b54.chunk.js.LICENSE.txt": "/word-blitz/static/js/2.1d919b54.chunk.js.LICENSE.txt"
+    "static/css/main.ddd754ed.chunk.css.map": "/word-blitz/static/css/main.ddd754ed.chunk.css.map",
+    "static/js/2.84f35317.chunk.js.LICENSE.txt": "/word-blitz/static/js/2.84f35317.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.c93d9a0a.js",
-    "static/js/2.1d919b54.chunk.js",
-    "static/css/main.1f387d31.chunk.css",
-    "static/js/main.e757c1e8.chunk.js"
+    "static/js/2.84f35317.chunk.js",
+    "static/css/main.ddd754ed.chunk.css",
+    "static/js/main.b863bce5.chunk.js"
   ]
 }
