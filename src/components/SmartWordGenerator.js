@@ -9,6 +9,7 @@ export function SmartWordGenerator(){
                            "U": 3, "V": 1, "W": 2, "X": 1, "Y": 2,
                            "Z": 1};
     let vowels = ["A","E","I","O","U"];
+    let easyConsonants = ["B","C","D","F","G","H","K","L","M","N","P","R","S","T","W","Y"]
     let x = () => {
         let sum = 0.0;
         for(let k of Object.keys(letterWeights)){
@@ -20,6 +21,15 @@ export function SmartWordGenerator(){
         let count = 0;
         for(let c of str){
             if(vowels.indexOf(c)!== -1){
+                count = count + 1;
+            }
+        }
+        return count;
+    }
+    function countConsonants(str){
+        let count = 0;
+        for(let c of str){
+            if(vowels.indexOf(c)=== -1){
                 count = count + 1;
             }
         }
@@ -46,6 +56,14 @@ export function SmartWordGenerator(){
             for(let i = 0; i < out.length; i++){
                 if(vowels.indexOf(out[i]) === -1){
                     out[i] = vowels[Math.floor(Math.random()*vowels.length)];
+                }
+            }
+        }
+        // check if no consonents, then insert some
+        if(countConsonants(out) <= 1){
+            for(let i = 0; i < out.length; i++){
+                if(vowels.indexOf(out[i]) === -1){
+                    out[i] = easyConsonants[Math.floor(Math.random()*easyConsonants.length)];
                 }
             }
         }
