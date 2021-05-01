@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/word-blitz/static/css/main.ddd754ed.chunk.css",
-    "main.js": "/word-blitz/static/js/main.b863bce5.chunk.js",
-    "main.js.map": "/word-blitz/static/js/main.b863bce5.chunk.js.map",
+    "main.js": "/word-blitz/static/js/main.18d59bde.chunk.js",
+    "main.js.map": "/word-blitz/static/js/main.18d59bde.chunk.js.map",
     "runtime-main.js": "/word-blitz/static/js/runtime-main.c93d9a0a.js",
     "runtime-main.js.map": "/word-blitz/static/js/runtime-main.c93d9a0a.js.map",
     "static/js/2.84f35317.chunk.js": "/word-blitz/static/js/2.84f35317.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.c93d9a0a.js",
     "static/js/2.84f35317.chunk.js",
     "static/css/main.ddd754ed.chunk.css",
-    "static/js/main.b863bce5.chunk.js"
+    "static/js/main.18d59bde.chunk.js"
   ]
 }
