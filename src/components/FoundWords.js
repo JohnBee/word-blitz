@@ -2,7 +2,7 @@ import React from 'react';
 
 
 export function FoundWords(props) {
-    function temp(wordsDict){
+    function listify(wordsDict){
         let out = [];
         for(let k of Object.keys(props.usedWords)){
             out.push(<li key={k} className="FoundWord">{k} +{props.usedWords[k]}</li>);
@@ -13,7 +13,7 @@ export function FoundWords(props) {
     return(
         <div className={FoundWords}>
             <ul className="FoundWords list">
-                {temp(props.usedWords)}
+                {listify(props.usedWords)}
             </ul>
         </div>
     );

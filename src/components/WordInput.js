@@ -41,7 +41,6 @@ export function WordInput(props){
             props.handleWordSubmit(word);
 
             setWord("");
-            console.log("submit");
         }
     }
     return(

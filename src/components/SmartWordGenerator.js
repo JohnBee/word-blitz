@@ -8,6 +8,7 @@ export function SmartWordGenerator(){
                            "P": 2, "Q": 1, "R": 6, "S": 6, "T": 9,
                            "U": 3, "V": 1, "W": 2, "X": 1, "Y": 2,
                            "Z": 1};
+    let vowels = ["A","E","I","O","U"];
     let x = () => {
         let sum = 0.0;
         for(let k of Object.keys(letterWeights)){
@@ -15,20 +16,43 @@ export function SmartWordGenerator(){
         }
         return sum;
     }
-    const genWeightArray = () => {
+    function countVowels(str){
+        let count = 0;
+        for(let c of str){
+            if(vowels.indexOf(c)!== -1){
+                count = count + 1;
+            }
+        }
+        return count;
+    }
+    function genWeightArray(){
         let arr = [];
         for(let k of Object.keys(letterWeights)){
-            for(let i =0; i < letterWeights[k]; i++){
+            for(let i = 0; i < letterWeights[k]; i++){
                 arr.push(k);
             }
         }
         return arr;
     }
     let weightedCharArr = genWeightArray();
-    let out = [];
-    for(let i=0; i < 10; i++){
-        out.push(weightedCharArr[Math.floor(Math.random()*weightedCharArr.length)])
-    }
 
-    return out;
+    function generateArray() {
+        let out = [];
+        for(let i=0; i < 10; i++){
+            out.push(weightedCharArr[Math.floor(Math.random()*weightedCharArr.length)])
+        }
+        // check if no vowels, then insert some
+        if(countVowels(out) <= 1){
+            for(let i = 0; i < out.length; i++){
+                if(vowels.indexOf(out[i]) === -1){
+                    out[i] = vowels[Math.floor(Math.random()*vowels.length)];
+                }
+            }
+        }
+        return out;
+    }
+    let generatedString = generateArray()
+    console.log(generatedString);
+
+    return generatedString;
 }

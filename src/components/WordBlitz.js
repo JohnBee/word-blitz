@@ -12,7 +12,7 @@ export function WordBlitz(){
     const [score, setScore] = useState(0);
     const [usedWords, setUsedWords] = useState({});
     const [timerDone, setTimerDone] = useState(false);
-    const [wordString, setWordString] = useState(SmartWordGenerator());
+    const [wordString, setWordString] = useState([]);
     const [seeInstructions, setSeeInstructions] = useState(true);
 
     var wordList = require('word-list-json');
@@ -29,7 +29,7 @@ export function WordBlitz(){
         for(let c of charArr){
             tempScore = tempScore + getScore(c);
         }
-        setUsedWords({ ...usedWords, [word]:tempScore});
+        setUsedWords({[word]:tempScore, ...usedWords});
         setScore((prev) => prev + tempScore);
     }
     function handleWordSubmit(word){
@@ -82,30 +82,33 @@ export function WordBlitz(){
     }
     return(
         <div className="WordBlitz">
-            <Timer time={time}/>
-            <WordTiles typedWord={typedWord.toUpperCase()} wordString={wordString}/>
-            {time===0 ?
-                <button className="StartButton" onClick={resetGame}>START</button> :
-                <WordInput handleTypedWord={handleTypedWord} letters={wordString} handleWordSubmit={handleWordSubmit}/>
-                }
-
-            <div className="PlayerScore">
-                Score: {score}
+        {!seeInstructions && <Timer time={time}/>}
+        {
+            seeInstructions &&
+            <div className="Instructions">
+                <h1>How To Play: </h1>
+                    <ol>
+                        <li>Press START</li>
+                        <li>Enter as many words as possible using the letters given.</li>
+                        <li>Score is calculated from letters used.</li>
+                    </ol>
+            <br/ >
             </div>
-            <FoundWords usedWords={usedWords} />
-                {
-                    seeInstructions ?
-                    <div className="Instructions">
-                        <h1>How To Play: </h1>
-                            <ol>
-                                <li>Press START</li>
-                                <li>Enter as many words as possible using the letters given.</li>
-                                <li>Score is calculated from letters used.</li>
-                            </ol>
-                    </div>
-                    : ""
-                }
+        }
+        {<WordTiles typedWord={typedWord.toUpperCase()} wordString={wordString}/>}
 
+        {
+            time===0 ?
+            <button className="StartButton" onClick={resetGame}>START</button> :
+            <WordInput handleTypedWord={handleTypedWord} letters={wordString} handleWordSubmit={handleWordSubmit}/>
+        }
+
+        {
+            !seeInstructions && <div className="PlayerScore">
+            Score: {score}
+        </div>
+        }
+        <FoundWords usedWords={usedWords} />
         </div>
 
     );
